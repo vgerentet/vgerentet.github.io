@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Projet PCB</title>
+
+<style>
+
+body{
+font-family:Arial;
+max-width:1000px;
+margin:auto;
+padding:40px;
+line-height:1.7;
+}
+
+img{
+max-width:100%;
+margin:20px 0;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Conception d’un PCB d’alimentation</h1>
+
+<h2>Contexte</h2>
+
+<p>
+Projet réalisé dans le cadre d’un travail d’étude en électronique.
+</p>
+
+<h2>Objectif</h2>
+
+<p>
+Concevoir un PCB capable d’assurer une alimentation stable pour un système embarqué.
+</p>
+
+<h2>Architecture</h2>
+
+<p>
+Le système comprend :
+</p>
+
+<ul>
+<li>convertisseur DC-DC</li>
+<li>filtrage</li>
+<li>protection</li>
+<li>régulation de tension</li>
+</ul>
+
+<img src="images/pcb.jpg">
+
+<h2>Conception</h2>
+
+<p>
+Le schéma électronique et le routage ont été réalisés sous KiCad.
+</p>
+
+<h2>Difficultés rencontrées</h2>
+
+<ul>
+<li>gestion du bruit</li>
+<li>placement des composants</li>
+<li>contraintes thermiques</li>
+</ul>
+
+<h2>Résultats</h2>
+
+<p>
+PCB fonctionnel validé expérimentalement.
+</p>
+
+<h2>Compétences utilisées</h2>
+
+<ul>
+<li>électronique analogique</li>
+<li>conception PCB</li>
+<li>KiCad</li>
+<li>validation expérimentale</li>
+</ul>
+
+<p>
+<a href="https://github.com/tonpseudo/pcb-power-supply">
+Voir le dépôt GitHub du projet
+</a>
+</p>
+
+</body>
+</html>
