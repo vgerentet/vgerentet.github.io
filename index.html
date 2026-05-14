@@ -297,10 +297,16 @@
             color: var(--primary-dark);
         }
 
-        .project-image {
+        .project-image-half {
             width: 50%;
             margin: 1rem auto 0;
             border-radius: 14px;
+        }
+
+        .project-image-full {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
         }
 
         .text-bullets {
@@ -342,7 +348,7 @@
                 gap: 1rem;
             }
 
-            .project-image {
+            .project-image-half {
                 width: 100%;
             }
         }
@@ -535,7 +541,7 @@
 
                     <img src="https://via.placeholder.com/600x350"
                         alt="Analog Sound Level Meter"
-                        class="project-image">
+                        class="project-image-half">
 
                     <div class="project-content">
 
@@ -566,7 +572,7 @@
 
                     <img src="https://via.placeholder.com/600x350"
                         alt="Inverted Pendulum"
-                        class="project-image">
+                        class="project-image-half">
 
                     <div class="project-content">
 
@@ -596,7 +602,7 @@
 
                     <img src="https://via.placeholder.com/600x350"
                         alt="Buck Converter"
-                        class="project-image">
+                        class="project-image-half">
 
                     <div class="project-content">
 
@@ -723,10 +729,6 @@
 
             <div class="project-card" style="margin-bottom: 4rem;">
 
-                <img src="images/1-1fb.png"
-                    alt="Functional Blocks of the Sound Level Meter"
-                    class="project-image">
-
                 <div class="project-content">
 
                     <p>
@@ -742,15 +744,16 @@
                     </ul>
 
                 </div>
+
+                <img src="images/1-1fb.png"
+                    alt="Functional Blocks of the Sound Level Meter"
+                    class="project-image-half">
+
             </div>
 
             <!-- ================= LTSPICE SCHEMATIC ================= -->
 
             <div class="project-card" style="margin-bottom: 4rem;">
-
-                <img src="images/1-2scheme.png"
-                    alt="LTSpice Schematic"
-                    class="project-image">
 
                 <div class="project-content">
 
@@ -764,6 +767,11 @@
                     </p>
 
                 </div>
+
+                <img src="images/1-2scheme.png"
+                    alt="LTSpice Schematic"
+                    class="project-image-half">
+
             </div>
 
             <!-- ================= SIGNAL PROCESSING ================= -->
@@ -773,10 +781,6 @@
             </h2>
 
             <div class="project-card" style="margin-bottom: 4rem;">
-
-                <img src="images/1-3signals.png"
-                    alt="Amplified Signals Simulation"
-                    class="project-image">
 
                 <div class="project-content">
 
@@ -799,6 +803,11 @@
                     </ul>
 
                 </div>
+
+                <img src="images/1-3signals.png"
+                    alt="Amplified Signals Simulation"
+                    class="project-image-half">
+
             </div>
 
             <!-- ================= THRESHOLD DETECTION ================= -->
@@ -808,10 +817,6 @@
             </h2>
 
             <div class="project-card" style="margin-bottom: 4rem;">
-
-                <img src="images/1-4comparator.png"
-                    alt="Comparator Signals"
-                    class="project-image">
 
                 <div class="project-content">
 
@@ -829,6 +834,34 @@
                     </p>
 
                 </div>
+
+                <img src="images/1-4comparator.png"
+                    alt="Comparator Signals"
+                    class="project-image-half">
+
+            </div>
+
+            <!-- ================= CIRCUIT TESTING & VALIDATION ================= -->
+
+            <h2 class="section-title">
+                Circuit Testing & Validation
+            </h2>
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <p>
+                        All functional blocks were assembled and tested independently
+                        using an oscilloscope and a current probe.
+                    </p>
+
+                </div>
+
+                <img src="images/1-7breadboard.png"
+                    alt="Circuit Testing and Validation"
+                    class="project-image-half">
+
             </div>
 
             <!-- ================= PCB DESIGN ================= -->
@@ -845,7 +878,7 @@
 
                     <img src="images/1-5pcb.png"
                         alt="PCB Routing"
-                        class="project-image">
+                        class="project-image-full">
 
                     <div class="project-content">
 
@@ -866,7 +899,7 @@
 
                     <img src="images/1-6assembled_pcb.png"
                         alt="Assembled PCB"
-                        class="project-image">
+                        class="project-image-full">
 
                     <div class="project-content">
 
