@@ -510,11 +510,11 @@
                 <div class="project-card">
 
                     <img src="https://via.placeholder.com/600x350"
-                        alt="Autonomous Line Follower Robot">
+                        alt="Analog Sound Level Meter">
 
                     <div class="project-content">
 
-                        <h3>Autonomous Line Follower Robot</h3>
+                        <h3>Analog Sound Level Meter</h3>
 
                         <p>
                             Development of an autonomous mobile robot
@@ -597,6 +597,375 @@
         </div>
     </section>
 
+
+    <!-- ========================================================= -->
+<!-- =============== PROJECT : SOUND LEVEL METER ============== -->
+<!-- ========================================================= -->
+
+<section id="sound-level-meter">
+    <div class="container">
+
+        <h2 class="section-title">
+            Analog Sound Level Meter
+        </h2>
+
+        <p style="max-width: 900px; color: var(--text-secondary); margin-bottom: 3rem;">
+            Design and implementation of an analog sound level meter based on an
+            electret microphone using only discrete electronic components
+            (transistors, resistors, capacitors, LEDs and microphone).
+            The system detects and visualizes sound intensity through a
+            multi-threshold LED interface powered by a 9V supply.
+        </p>
+
+        <!-- ================= PROJECT HEADER ================= -->
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <img src="images/1-6assembled_pcb.png"
+                alt="Assembled Sound Level Meter PCB">
+
+            <div class="project-content">
+
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project focused on the development of a fully analog
+                    sound level meter capable of detecting sound levels
+                    between approximately 70 dB and 90 dB.
+                    The system processes extremely low-amplitude microphone
+                    signals and activates LEDs according to predefined
+                    voltage thresholds.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Analog Electronics</span>
+                    <span class="tag">BJT Amplifiers</span>
+                    <span class="tag">LTSpice</span>
+                    <span class="tag">PCB Design</span>
+                    <span class="tag">Signal Processing</span>
+                </div>
+
+                <a href="https://github.com/YOUR_USERNAME/pcb-soud_level_meter"
+                    target="_blank"
+                    class="project-link">
+                    View GitHub Repository →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ================= CONTEXT ================= -->
+
+        <div class="skills-grid" style="margin-bottom: 4rem;">
+
+            <div class="skill-card">
+                <h3>Objective</h3>
+
+                <p>
+                    Develop an analog sound measurement system using
+                    only discrete components while ensuring reliable
+                    threshold detection from millivolt-level microphone signals.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Methodology</h3>
+
+                <p>
+                    Functional analysis, analog circuit design,
+                    LTSpice simulation, hardware prototyping,
+                    experimental validation and PCB manufacturing.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Responsibilities</h3>
+
+                <p>
+                    Design of the signal processing chain,
+                    amplifier dimensioning, comparator implementation,
+                    simulation, debugging and PCB assembly.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ================= SYSTEM ARCHITECTURE ================= -->
+
+        <h2 class="section-title">
+            System Architecture
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <img src="images/1-1fb.png"
+                alt="Functional Blocks of the Sound Level Meter">
+
+            <div class="project-content">
+
+                <p>
+                    The system architecture is composed of several functional blocks:
+                </p>
+
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Electret microphone for signal acquisition</li>
+                    <li>High-gain amplification stages</li>
+                    <li>Voltage follower for impedance matching</li>
+                    <li>Comparator stage with threshold detection</li>
+                    <li>LED visualization system</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- ================= LTSPICE SCHEMATIC ================= -->
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <img src="images/1-2scheme.png"
+                alt="LTSpice Schematic">
+
+            <div class="project-content">
+
+                <h3>LTSpice Circuit Design</h3>
+
+                <p>
+                    Complete simulation and validation of the analog
+                    processing chain using LTSpice.
+                    The schematic includes amplification stages,
+                    impedance adaptation and transistor-based comparators.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- ================= SIGNAL PROCESSING ================= -->
+
+        <h2 class="section-title">
+            Signal Processing & Amplification
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <img src="images/1-3signals.png"
+                alt="Amplified Signals Simulation">
+
+            <div class="project-content">
+
+                <p>
+                    The microphone signal was amplified using a
+                    multi-stage BJT amplifier architecture.
+                    Initial theoretical gain values between 1500 and 2000
+                    were experimentally adjusted to approximately 400
+                    to ensure stable operation.
+                </p>
+
+                <p>
+                    Non-linear effects and signal clipping were observed,
+                    especially on negative waveform peaks.
+                    However, this distortion remained acceptable because
+                    the application only required peak-level detection
+                    rather than faithful audio reproduction.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">BJT Amplifiers</span>
+                    <span class="tag">Low-Level Signal Processing</span>
+                    <span class="tag">Analog Design</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= THRESHOLD DETECTION ================= -->
+
+        <h2 class="section-title">
+            Threshold Detection
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <img src="images/1-4comparator.png"
+                alt="Comparator Signals">
+
+            <div class="project-content">
+
+                <p>
+                    Three transistor-based comparators were used to detect
+                    different sound intensity levels.
+                    Voltage thresholds were generated using a resistor divider,
+                    enabling progressive LED activation depending on
+                    signal amplitude.
+                </p>
+
+                <p>
+                    A Darlington configuration ensured a stable LED current
+                    close to 15 mA for reliable visualization.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- ================= PCB DESIGN ================= -->
+
+        <h2 class="section-title">
+            PCB Design & Assembly
+        </h2>
+
+        <div class="projects-grid" style="margin-bottom: 4rem;">
+
+            <!-- PCB Routing -->
+
+            <div class="project-card">
+
+                <img src="images/1-5pcb.png"
+                    alt="PCB Routing">
+
+                <div class="project-content">
+
+                    <h3>PCB Routing</h3>
+
+                    <p>
+                        PCB designed using Proteus with compact routing
+                        constraints (6.7 × 6.7 cm), mixed-layer routing
+                        and via integration.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Assembled PCB -->
+
+            <div class="project-card">
+
+                <img src="images/1-6assembled_pcb.png"
+                    alt="Assembled PCB">
+
+                <div class="project-content">
+
+                    <h3>Hardware Assembly</h3>
+
+                    <p>
+                        Manual assembly and soldering of all components
+                        onto the manufactured PCB followed by
+                        experimental validation and debugging.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= RESULTS ================= -->
+
+        <h2 class="section-title">
+            Results & Analysis
+        </h2>
+
+        <div class="skills-grid" style="margin-bottom: 4rem;">
+
+            <div class="skill-card">
+                <h3>Simulation Results</h3>
+
+                <p>
+                    Successful detection of three sound levels,
+                    stable LED activation and identification
+                    of transient response limitations.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Experimental Results</h3>
+
+                <p>
+                    Functional prototype with progressive LED activation
+                    and experimentally calibrated thresholds.
+                    Measured gain remained consistent with adjusted design.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Critical Issues</h3>
+
+                <p>
+                    Final PCB validation was limited by false contacts
+                    caused by an inverted PCB layer during manufacturing,
+                    highlighting fabrication constraints.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ================= CHALLENGES ================= -->
+
+        <h2 class="section-title">
+            Challenges & Engineering Decisions
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">
+                            Real vs theoretical component behavior
+                        </strong><br>
+                        Gain reduction and removal of one amplification stage
+                        after experimental validation.
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">
+                            Microphone sensitivity
+                        </strong><br>
+                        Empirical recalibration of threshold values.
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">
+                            Signal distortion & clipping
+                        </strong><br>
+                        Accepted because the application focused on
+                        peak detection rather than waveform fidelity.
+                    </li>
+
+                    <li>
+                        <strong style="color: white;">
+                            PCB manufacturing defects
+                        </strong><br>
+                        Identification of practical fabrication constraints
+                        related to vias and layer orientation.
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- ================= SKILLS DEVELOPED ================= -->
+
+        <h2 class="section-title">
+            Skills Developed
+        </h2>
+
+        <div class="tech-list">
+
+            <div class="tech-item">Analog Electronics</div>
+            <div class="tech-item">BJT Amplifier Design</div>
+            <div class="tech-item">Comparators</div>
+            <div class="tech-item">Signal Conditioning</div>
+            <div class="tech-item">LTSpice Simulation</div>
+            <div class="tech-item">PCB Routing</div>
+            <div class="tech-item">Hardware Debugging</div>
+            <div class="tech-item">Experimental Validation</div>
+            <div class="tech-item">Electronic Assembly</div>
+
+        </div>
+
+    </div>
+</section>
     <!-- ================= FOOTER ================= -->
 
     <footer>
