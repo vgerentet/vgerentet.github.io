@@ -198,6 +198,12 @@
             scroll-margin-top: 95px;
         }
 
+        .section-intro {
+            max-width: 950px;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
         /* ================= SKILLS ================= */
 
         .skills-grid {
@@ -299,7 +305,7 @@
 
         .project-image-half {
             width: 50%;
-            margin: 1rem auto 0;
+            margin: 1rem auto;
             border-radius: 14px;
         }
 
@@ -317,6 +323,15 @@
 
         .text-bullets li {
             margin-bottom: 0.6rem;
+        }
+
+        .callout {
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid rgba(56, 189, 248, 0.18);
+            border-radius: 16px;
+            padding: 1.2rem 1.4rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
         }
 
         /* ================= FOOTER ================= */
@@ -399,19 +414,16 @@
             <div class="hero-text">
                 <h1>
                     Electrical & Electronics
-                    <span>Engineering Student</span>
+                    <span>Engineer</span>
                 </h1>
 
                 <p>
-                    Engineering student specialized in control systems,
-                    embedded electronics and robotics.
-                    Passionate about dynamic systems, autonomous robotics,
-                    power electronics and system modeling.
+                    Engineering student specialized in embedded systems, power electronics, analog electronics, RF systems, signal processing, FPGA programming, and embedded hardware. Experienced in sensor/actuator interfacing, Arduino development, and high-frequency electronic design. Interests in microcontroller programming and microchip engineering.
                 </p>
 
                 <p>
-                    This portfolio presents academic and engineering projects
-                    developed during my studies in electronics and electrical engineering.
+                    This portfolio presents academic and personal engineering projects developed during my studies
+                    in electronics and electrical engineering, as well as the general content of my studies.
                 </p>
 
                 <div class="hero-buttons">
@@ -426,13 +438,12 @@
             </div>
 
             <div class="profile-card">
-                <img src="https://via.placeholder.com/400x400"
-                    alt="Profile Picture">
+                
 
-                <h3>Your Name</h3>
+                <h3>Victor Gérentet</h3>
 
                 <p>
-                    Electrical Engineering • Embedded Systems • Robotics
+                    INSA Lyon University • Electrical Engineering Faculty • specialized in embedded electronics
                 </p>
             </div>
 
@@ -444,55 +455,49 @@
     <section id="skills">
         <div class="container">
 
-            <h2 class="section-title">Domains of Expertise</h2>
+            <h2 class="section-title">Core Competencies</h2>
 
             <div class="skills-grid">
 
                 <div class="skill-card">
-                    <h3>Control Systems</h3>
-                    <p>
-                        Dynamic system analysis, PID control,
-                        feedback systems and automation.
-                    </p>
-                </div>
-
-                <div class="skill-card">
                     <h3>Embedded Systems</h3>
                     <p>
-                        Microcontrollers, real-time programming
-                        and hardware/software integration.
+                        Embedded software development on microcontrollers and FPGA, real-time sensor acquisition, hardware integration, communication protocols (Ethernet, CAN).
                     </p>
                 </div>
 
                 <div class="skill-card">
-                    <h3>Robotics</h3>
+                    <h3>Control Systems</h3>
                     <p>
-                        Autonomous systems, sensors,
-                        motion control and mobile robotics.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Electronics</h3>
-                    <p>
-                        Analog and digital circuit design,
-                        PCB development and signal processing.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Simulation & Modeling</h3>
-                    <p>
-                        Mathematical modeling, simulation
-                        and system validation.
+                        Dynamic system modeling, closed-loop control, state machines and industrial automation logic. PLC programming (IEC 61131)
                     </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Power Electronics</h3>
                     <p>
-                        DC-DC converters, power management
-                        and energy systems.
+                        power conversion systems: buck converters, half/full-bridge inverters and resonant topologies.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Electronics</h3>
+                    <p>
+                        Analog and digital electronics design, PCB development, signal conditioning and RF electronics
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Machine Learning & AI</h3>
+                    <p>
+                        Neural network development for image classification, model training, inference optimization and AI data pipelines.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Processing</h3>
+                    <p>
+                        Measurement data acquisition, signal processing, visualization and analysis.
                     </p>
                 </div>
 
@@ -513,13 +518,12 @@
                 <div class="tech-item">MATLAB / Simulink</div>
                 <div class="tech-item">Python</div>
                 <div class="tech-item">C / C++</div>
-                <div class="tech-item">ROS</div>
                 <div class="tech-item">KiCad</div>
                 <div class="tech-item">LTSpice</div>
-                <div class="tech-item">STM32</div>
                 <div class="tech-item">Arduino</div>
-                <div class="tech-item">Git / GitHub</div>
-                <div class="tech-item">Linux</div>
+                <div class="tech-item">VHDL / Verilog</div>
+                <div class="tech-item">IEC 61131-3 (ST/LD/FBD)</div>
+                <div class="tech-item">Linux environment</div>
 
             </div>
 
@@ -539,17 +543,13 @@
 
                 <a href="#sound-level-meter" class="project-card project-card-link interactive-hover">
 
-                    <img src="https://via.placeholder.com/600x350"
-                        alt="Analog Sound Level Meter"
-                        class="project-image-half">
-
                     <div class="project-content">
 
                         <h3>Analog Sound Level Meter</h3>
 
                         <p>
                             Analog sound level meter using an electret microphone,
-                            multi-stage BJT amplification, transistor-based threshold
+                            transistor-based multi-stage amplification, threshold
                             detection and LED visualization.
                         </p>
 
@@ -568,55 +568,46 @@
 
                 <!-- Project 2 -->
 
-                <div class="project-card">
-
-                    <img src="https://via.placeholder.com/600x350"
-                        alt="Inverted Pendulum"
-                        class="project-image-half">
+                <a href="#ultrasonic-scanner" class="project-card project-card-link interactive-hover">
 
                     <div class="project-content">
 
-                        <h3>Inverted Pendulum Control</h3>
+                        <h3>Ultrasonic Rotating Scanner</h3>
 
                         <p>
-                            Modeling and stabilization of an inverted pendulum
-                            using feedback control algorithms.
+                            Embedded mechatronic scanner using a stepper motor, ultrasonic ranging sensor,
+                            LCD display and MATLAB data export to reconstruct 2D room profiles.
                         </p>
 
                         <div class="project-tags">
-                            <span class="tag">Control Systems</span>
+                            <span class="tag">Embedded C++</span>
+                            <span class="tag">Mechatronics</span>
                             <span class="tag">MATLAB</span>
-                            <span class="tag">Simulation</span>
                         </div>
 
-                        <a href="#" class="project-link">
+                        <span class="project-link">
                             View Project →
-                        </a>
+                        </span>
 
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 3 -->
 
                 <div class="project-card">
 
-                    <img src="https://via.placeholder.com/600x350"
-                        alt="Buck Converter"
-                        class="project-image-half">
-
                     <div class="project-content">
 
-                        <h3>DC-DC Buck Converter</h3>
+                        <h3>FPGA Programming</h3>
 
                         <p>
-                            Design and simulation of a buck converter
-                            for efficient voltage regulation applications.
+                            Comming soon
                         </p>
 
                         <div class="project-tags">
-                            <span class="tag">Power Electronics</span>
-                            <span class="tag">LTSpice</span>
-                            <span class="tag">PCB Design</span>
+                            <span class="tag"></span>
+                            <span class="tag"></span>
+                            <span class="tag"></span>
                         </div>
 
                         <a href="#" class="project-link">
@@ -631,7 +622,6 @@
         </div>
     </section>
 
-
     <!-- ========================================================= -->
     <!-- =============== PROJECT : SOUND LEVEL METER ============== -->
     <!-- ========================================================= -->
@@ -643,11 +633,9 @@
                 Project 1 : Analog Sound Level Meter
             </h2>
 
-            <p style="max-width: 900px; color: var(--text-secondary); margin-bottom: 3rem;">
-                Design and implementation of an analog sound level meter based on an
-                electret microphone using only discrete electronic components
-                (transistors, resistors, capacitors, LEDs and microphone).
-                The system detects and visualizes sound intensity through a
+            <p class="section-intro">
+                Design and implementation of an analog sound level meter based on an electret microphone using only discrete electronic components
+                (transistors, resistors, capacitors, LEDs and microphone). The system detects and visualizes sound intensity through a
                 multi-threshold LED interface powered by a 9V supply.
             </p>
 
@@ -660,23 +648,20 @@
                     <h3>Project Overview</h3>
 
                     <p>
-                        This project focused on the development of a fully analog
-                        sound level meter capable of detecting sound levels
-                        between approximately 70 dB and 90 dB.
-                        The system processes extremely low-amplitude microphone
-                        signals and activates LEDs according to predefined
-                        voltage thresholds.
+                        This project focused on the development of a fully analog sound level meter capable of detecting sound levels
+                        between approximately 70 dB and 90 dB. The system processes extremely low-amplitude microphone signals and
+                        activates LEDs according to predefined voltage thresholds.
                     </p>
 
                     <div class="project-tags">
                         <span class="tag">Analog Electronics</span>
-                        <span class="tag">BJT Amplifiers</span>
-                        <span class="tag">LTSpice</span>
+                        <span class="tag">Transistor-based Amplifiers</span>
+                        <span class="tag">LTSpice simulation</span>
                         <span class="tag">PCB Design</span>
                         <span class="tag">Signal Processing</span>
                     </div>
 
-                    <a href="https://github.com/YOUR_USERNAME/pcb-soud_level_meter"
+                    <a href="https://github.com/vgerentet/pcb-soud_level_meter"
                         target="_blank"
                         class="project-link">
                         View GitHub Repository →
@@ -693,8 +678,7 @@
                     <h3>Objective</h3>
 
                     <p>
-                        Develop an analog sound measurement system using
-                        only discrete components while ensuring reliable
+                        Develop an analog sound measurement system using only discrete components while ensuring reliable
                         threshold detection from millivolt-level microphone signals.
                     </p>
                 </div>
@@ -703,8 +687,7 @@
                     <h3>Methodology</h3>
 
                     <p>
-                        Functional analysis, analog circuit design,
-                        LTSpice simulation, hardware prototyping,
+                        Functional analysis, analog circuit design, LTSpice simulation, hardware prototyping,
                         experimental validation and PCB manufacturing.
                     </p>
                 </div>
@@ -713,8 +696,7 @@
                     <h3>Responsibilities</h3>
 
                     <p>
-                        Design of the signal processing chain,
-                        amplifier dimensioning, comparator implementation,
+                        Design of the signal processing chain, amplifier dimensioning, comparator implementation,
                         simulation, debugging and PCB assembly.
                     </p>
                 </div>
@@ -760,10 +742,8 @@
                     <h3>LTSpice Circuit Design</h3>
 
                     <p>
-                        Complete simulation and validation of the analog
-                        processing chain using LTSpice.
-                        The schematic includes amplification stages,
-                        impedance adaptation and transistor-based comparators.
+                        Complete simulation and validation of the analog processing chain using LTSpice.
+                        The schematic includes amplification stages, impedance adaptation and transistor-based comparators.
                     </p>
 
                 </div>
@@ -786,7 +766,7 @@
 
                     <ul class="text-bullets">
                         <li>
-                            Multi-stage BJT amplifier architecture.
+                            Multi-stage transistor-based amplifier architecture.
                         </li>
                         <li>
                             Initial theoretical gain between 1500 and 2000, experimentally adjusted to approximately 400.
@@ -821,16 +801,13 @@
                 <div class="project-content">
 
                     <p>
-                        Three transistor-based comparators were used to detect
-                        different sound intensity levels.
-                        Voltage thresholds were generated using a resistor divider,
-                        enabling progressive LED activation depending on
+                        Three transistor-based comparators were used to detect different sound intensity levels.
+                        Voltage thresholds were generated using a resistor divider, enabling progressive LED activation depending on
                         signal amplitude.
                     </p>
 
                     <p>
-                        A Darlington configuration ensured a stable LED current
-                        close to 15 mA for reliable visualization.
+                        A Darlington configuration ensured a stable LED current close to 15 mA for reliable visualization.
                     </p>
 
                 </div>
@@ -852,8 +829,7 @@
                 <div class="project-content">
 
                     <p>
-                        All functional blocks were assembled and tested independently
-                        using an oscilloscope and a current probe.
+                        All functional blocks were assembled and tested independently using an oscilloscope and a current probe.
                     </p>
 
                 </div>
@@ -972,8 +948,7 @@
                             <strong style="color: white;">
                                 Real vs theoretical component behavior
                             </strong><br>
-                            Gain reduction and removal of one amplification stage
-                            after experimental validation.
+                            Gain reduction and removal of one amplification stage after experimental validation.
                         </li>
 
                         <li style="margin-bottom: 1rem;">
@@ -987,16 +962,14 @@
                             <strong style="color: white;">
                                 Signal distortion & clipping
                             </strong><br>
-                            Accepted because the application focused on
-                            peak detection rather than waveform fidelity.
+                            Accepted because the application focused on peak detection rather than waveform fidelity.
                         </li>
 
                         <li>
                             <strong style="color: white;">
                                 PCB manufacturing defects
                             </strong><br>
-                            Identification of practical fabrication constraints
-                            related to vias and layer orientation.
+                            Identification of practical fabrication constraints related to vias and layer orientation.
                         </li>
 
                     </ul>
@@ -1021,6 +994,440 @@
                 <div class="tech-item">Hardware Debugging</div>
                 <div class="tech-item">Experimental Validation</div>
                 <div class="tech-item">Electronic Assembly</div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ============= PROJECT : ULTRASONIC SCANNER ============== -->
+    <!-- ========================================================= -->
+
+    <section id="ultrasonic-scanner" class="anchor-section">
+        <div class="container">
+
+            <h2 class="section-title">
+                Project 2 : Ultrasonic Rotating Scanner
+            </h2>
+
+            <p class="section-intro">
+                Embedded electronics and mechatronics project designed to build a 2D ultrasonic rotating scanner capable of measuring distances,
+                reconstructing the shape of a room from angular scans, and exporting data for MATLAB visualization.
+                The system combines embedded programming, electronic system design, mechanical integration and data processing.
+            </p>
+
+            <!-- ================= PROJECT OVERVIEW ================= -->
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <h3>Project Overview</h3>
+
+                    <p>
+                        The objective was to design and implement a rotating ultrasonic scanning system able to sweep an ultrasonic sensor over a
+                        controlled angular range, measure distances in real time, display the current state and measurement on an LCD screen,
+                        and export the acquired data for post-processing in MATLAB.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="tag">Embedded C++</span>
+                        <span class="tag">Mechatronics</span>
+                        <span class="tag">Finite-State Machine</span>
+                        <span class="tag">MATLAB</span>
+                    </div>
+
+                    <div class="callout">
+                        The control logic is based on a robust finite-state machine architecture to manage start/stop actions, measurement cycles,
+                        and display updates with reliable system behavior.
+                    </div>
+                    <a href="https://github.com/vgerentet/arduino-ultrasonic_scanner"
+                        target="_blank"
+                        class="project-link">
+                        View GitHub Repository →
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================= OBJECTIVE / TOOLCHAIN / ARCHITECTURE ================= -->
+
+            <div class="skills-grid" style="margin-bottom: 4rem;">
+
+                <div class="skill-card">
+                    <h3>Objective</h3>
+                    <p>
+                        Rotate an ultrasonic sensor over a controlled angular range, measure distances in real time and reconstruct the geometry
+                        of the scanned environment.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Hardware & Software</h3>
+                    <p>
+                        Stepper motor, ULN2003 driver, HC-SR04 sensor, LCD1602, 74HC595N shift register, push buttons,
+                        Arduino IDE, KiCad and MATLAB.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Key Challenge</h3>
+                    <p>
+                        Build a reliable embedded system while keeping the mechanical structure stable, reducing GPIO usage,
+                        and ensuring clean state transitions.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ================= SYSTEM ARCHITECTURE ================= -->
+
+            <h2 class="section-title">
+                System Architecture
+            </h2>
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <p>
+                        The complete architecture combines sensing, actuation, display and control. The stepper motor is driven by the Arduino through a
+                        ULN2003 driver module, while the LCD1602 display is controlled through a 74HC595N shift register in order to reduce the number of
+                        required GPIO pins.
+                    </p>
+
+                    <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                        <li>Stepper motor for angular scanning</li>
+                        <li>ULN2003 driver module for motor control</li>
+                        <li>HC-SR04 ultrasonic sensor for distance measurement</li>
+                        <li>LCD1602 display for state and data visualization</li>
+                        <li>74HC595N shift register for LCD communication</li>
+                        <li>Two push buttons for Start / Stop control</li>
+                    </ul>
+
+                </div>
+
+                <img src="images/components.png"
+                    alt="Component overview"
+                    class="project-image-half">
+
+            </div>
+
+            <!-- ================= THEORY / MODELING ================= -->
+
+            <h2 class="section-title">
+                Modeling / Theory
+            </h2>
+
+            <div class="projects-grid" style="margin-bottom: 4rem;">
+
+                <div class="project-card">
+
+                    <img src="images/scheme.png"
+                        alt="Circuit scheme"
+                        class="project-image-full">
+
+                    <div class="project-content">
+                        <h3>Circuit Scheme</h3>
+                        <p>
+                            The LCD is driven through a serial-to-parallel shift register to reduce Arduino pin usage,
+                            while the stepper motor is controlled through the ULN2003 interface.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+
+                    <img src="images/states.png"
+                        alt="State transition diagram"
+                        class="project-image-full">
+
+                    <div class="project-content">
+                        <h3>Finite-State Machine</h3>
+                        <p>
+                            The control logic follows four operating states with Start and Stop inputs.
+                            This structure improves robustness and simplifies system supervision.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <p>
+                        The scan cycle follows the sequence 0° → 180° → 0° → -180° → 0° ... in order to prevent cable twisting during continuous operation.
+                        The scan is performed with angular increments of 10°.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="tag">Angular Scanning</span>
+                        <span class="tag">FSM Control</span>
+                        <span class="tag">LCD Communication</span>
+                        <span class="tag">Cable Management</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= IMPLEMENTATION ================= -->
+
+            <h2 class="section-title">
+                Implementation
+            </h2>
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <p>
+                        The ultrasonic sensor is mounted on a vertically rotating pivot driven by the stepper motor.
+                        During scanning, the motor moves to each target angle, the HC-SR04 measures the distance,
+                        and the LCD displays the current state, angle and measured distance.
+                    </p>
+
+                </div>
+
+                <img src="images/photo1.png"
+                    alt="Prototype photo"
+                    class="project-image-half">
+
+            </div>
+
+            <div class="skills-grid" style="margin-bottom: 4rem;">
+
+                <div class="skill-card">
+                    <h3>Motion Sequence</h3>
+                    <p>
+                        Motor rotation is performed in controlled angular steps to ensure repeatable measurements and
+                        coherent scan sampling.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Display Logic</h3>
+                    <p>
+                        The LCD displays the current state, angle and distance in real time, helping debug the embedded control loop.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>System Robustness</h3>
+                    <p>
+                        Start/Stop push buttons and finite-state control improve operational stability and prevent unintended state changes.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ================= DATA ACQUISITION ================= -->
+
+            <h2 class="section-title">
+                Data Acquisition & Processing
+            </h2>
+
+            <div class="project-card" style="margin-bottom: 4rem;">
+
+                <div class="project-content">
+
+                    <p>
+                        A MATLAB script, <strong>Scanner2D.m</strong>, retrieves serial data from the Arduino and stores the measurements in a CSV file.
+                        A second script processes the CSV data and reconstructs the scanned object shape.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="tag">Serial Communication</span>
+                        <span class="tag">CSV Export</span>
+                        <span class="tag">MATLAB Processing</span>
+                    </div>
+
+                </div>
+
+                <img src="images/photo2.png"
+                    alt="Second prototype photo"
+                    class="project-image-half">
+
+            </div>
+
+            <!-- ================= EXPERIMENTAL RESULTS ================= -->
+
+            <h2 class="section-title">
+                Experimental Results
+            </h2>
+
+            <div class="projects-grid" style="margin-bottom: 4rem;">
+
+                <div class="project-card">
+
+                    <img src="images/plot.png"
+                        alt="Final scan reconstruction plot"
+                        class="project-image-full">
+
+                    <div class="project-content">
+                        <h3>Scan Reconstruction</h3>
+                        <p>
+                            The reconstructed plot shows the room profile obtained from the measured distances and angular positions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+
+                    <div class="project-content">
+                        <h3>Validated Functions</h3>
+                        <p>
+                            The scanner successfully controlled angular motion, measured distances in real time,
+                            exported scan data and reconstructed 2D profiles after post-processing.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="tag">Real-Time Measurement</span>
+                            <span class="tag">2D Reconstruction</span>
+                            <span class="tag">Embedded Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <!-- ================= EXPERIMENTAL RESULTS ================= -->
+
+            <h2 class="section-title">
+                Experimental Results
+            </h2>
+
+            <div class="projects-grid" style="margin-bottom: 4rem;">
+
+                <div class="project-card">
+
+                    <img src="images/1-8plot.png"
+                        alt="Living room scan reconstruction plot"
+                        class="project-image-full">
+
+                    <div class="project-content">
+
+                        <h3>Room Scan Reconstruction</h3>
+
+                        <p>
+                            The plot below shows the measured values obtained during the scan of a living room.
+                            False measurements larger than <strong>500 cm</strong> were filtered out before processing.
+                            The reconstructed profile highlights the ability of the scanner to estimate the geometry
+                            of the surrounding environment from angular distance measurements.
+                        </p>
+
+                        <p>
+                            The large beamwidth of the HC-SR04 ultrasonic sensor (approximately <strong>15°</strong>)
+                            can clearly be observed, as nearby objects are detected over a relatively wide angular range.
+                            This behavior introduces measurement spreading and reduces spatial precision.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+
+                    <div class="project-content">
+
+                        <h3>Validated System Functions</h3>
+
+                        <p>
+                            The scanner successfully demonstrated:
+                        </p>
+
+                        <ul style="padding-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            <li>Accurate angular motion control</li>
+                            <li>Real-time distance measurements</li>
+                            <li>Serial export of scan data for post-processing</li>
+                            <li>2D room profile reconstruction from measured values</li>
+                        </ul>
+
+                        <p>
+                            The project also demonstrated the integration of several engineering domains:
+                        </p>
+
+                        <div class="project-tags" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">Sensor Interfacing</span>
+                            <span class="tag">Motor Control</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+
+                        <div class="callout">
+                            Although the prototype successfully validates the overall scanning architecture,
+                            the measurement performance remains limited by the relatively low precision and
+                            accuracy of the HC-SR04 ultrasonic sensor.
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CHALLENGES ================= -->
+
+            <h2 class="section-title">
+                Challenges Encountered
+            </h2>
+
+            <div class="skills-grid" style="margin-bottom: 4rem;">
+
+                <div class="skill-card">
+                    <h3>Mechanical Integration</h3>
+                    <p>
+                        Designing a stable metallic structure was challenging because the motor and sensor were not originally intended
+                        for this type of assembly.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>State Management</h3>
+                    <p>
+                        Button debouncing and the prevention of unintended multiple state transitions required careful software design.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Timing Constraints</h3>
+                    <p>
+                        The 74HC595N shift register required precise timing management to ensure stable LCD communication.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Sensor Limitations</h3>
+                    <p>
+                        The HC-SR04 sensor introduced noisy measurements, false detections and limited precision.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ================= IMPROVEMENTS ================= -->
+
+
+
+            <!-- ================= SKILLS DEVELOPED ================= -->
+
+            <h2 class="section-title">
+                Skills Developed
+            </h2>
+
+            <div class="tech-list">
+
+                <div class="tech-item">Embedded Programming</div>
+                <div class="tech-item">Mechatronics</div>
+                <div class="tech-item">Sensor Interfacing</div>
+                <div class="tech-item">Motor Control</div>
+                <div class="tech-item">Finite-State Machine</div>
+                <div class="tech-item">Serial Communication</div>
+                <div class="tech-item">MATLAB Processing</div>
+                <div class="tech-item">Data Visualization</div>
+                <div class="tech-item">System Integration</div>
 
             </div>
 
