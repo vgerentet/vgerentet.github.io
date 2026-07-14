@@ -387,7 +387,6 @@
             }
         }
     </style>
-    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
@@ -396,7 +395,7 @@
 
     <header>
         <div class="container navbar">
-            <div class="logo">Victor Gérentet</div>
+            <div class="logo">Gérentet Victor - Portfolio</div>
 
             <nav class="nav-links">
                 <a href="#home">Home</a>
@@ -419,7 +418,7 @@
                 </h1>
 
                 <p>
-                    Master engineering student specialized in embedded systems, FPGA programming, and embedded hardware. Experienced in sensor/actuator interfacing, Arduino development, and high-frequency electronic design. Interests in microcontroller programming and microchip engineering.
+                    Engineering student specialized in embedded systems, power electronics, analog electronics, RF systems, signal processing, FPGA programming, and embedded hardware. Experienced in sensor/actuator interfacing, Arduino development, and high-frequency electronic design. Interests in microcontroller programming and microchip engineering.
                 </p>
 
                 <p>
@@ -595,28 +594,28 @@
 
                 <!-- Project 3 -->
 
-                <div class="project-card">
+
+                <a href="#fpga-stopwatch" class="project-card project-card-link interactive-hover">
 
                     <div class="project-content">
 
-                        <h3>FPGA Programming</h3>
+                        <h3>Digital stopwatch on FPGA</h3>
 
                         <p>
-                            Comming soon
+                            Design and implementation of a modular digital stopwatch in VHDL on a Xilinx Artix-7 FPGA (Nexys A7)
                         </p>
 
                         <div class="project-tags">
-                            <span class="tag"></span>
-                            <span class="tag"></span>
-                            <span class="tag"></span>
+                            <span class="tag">FPGA Development</span>
+                            <span class="tag">VHDL</span>
                         </div>
 
-                        <a href="#" class="project-link">
+                        <span class="project-link">
                             View Project →
-                        </a>
+                        </span>
 
                     </div>
-                </div>
+                </a>
 
             </div>
 
@@ -1049,6 +1048,7 @@
                         View GitHub Repository →
                     </a>
                 </div>
+                
             </div>
 
             <!-- ================= OBJECTIVE / TOOLCHAIN / ARCHITECTURE ================= -->
@@ -1435,12 +1435,442 @@
         </div>
     </section>
 
+
+    
+<!-- ========================================================= -->
+<!-- ============ PROJECT : FPGA DIGITAL STOPWATCH ============ -->
+<!-- ========================================================= -->
+
+<section id="fpga-stopwatch" class="anchor-section">
+    <div class="container">
+
+        <h2 class="section-title">
+            Project 3 : FPGA Digital Stopwatch (VHDL)
+        </h2>
+
+        <p class="section-intro">
+            Design and implementation of a modular digital stopwatch in VHDL on a Xilinx Artix-7 FPGA (Nexys A7).
+            The system performs real-time timekeeping, display multiplexing, and user interaction through a
+            finite-state machine architecture.
+        </p>
+
+        <!-- ================= PROJECT OVERVIEW ================= -->
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project focused on the development of a complete FPGA-based stopwatch capable of counting
+                    tenths of seconds, seconds, and minutes up to <strong>59:59.9</strong> with automatic rollover.
+                    The design was entirely implemented in VHDL using a modular architecture composed of clock
+                    management, counter, display, and control modules.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">VHDL Design</span>
+                    <span class="tag">FPGA Development</span>
+                    <span class="tag">FSM</span>
+                    <span class="tag">BCD Counters</span>
+                    <span class="tag">Vivado</span>
+                    <span class="tag">Hardware Validation</span>
+                </div>
+
+                <a href="https://github.com/vgerentet/FPGA_digital_stopwatch"
+                    target="_blank"
+                    class="project-link">
+                    View GitHub Repository →
+                </a>
+
+                <div style="text-align:center; margin-top:2rem;">
+
+                    <img src="images/Proj3/3-1pcb.png"
+                        alt="Nexys A7 FPGA Board"
+                        class="project-image-half"
+                        style="max-width:40%; display:block; margin:auto;">
+
+                    <p style="margin-top:1rem; color:var(--text-secondary);">
+                        Xilinx Artix-7 FPGA Development Board (Nexys A7)
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= CONTEXT ================= -->
+
+        <div class="skills-grid" style="margin-bottom: 4rem;">
+
+            <div class="skill-card">
+                <h3>Objective</h3>
+
+                <p>
+                    Develop a complete digital stopwatch on FPGA capable of accurately measuring time,
+                    displaying minutes and seconds, and handling user commands in real time.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Methodology</h3>
+
+                <p>
+                    Hierarchical VHDL design, functional simulation, validation with test benches for each module, module integration,
+                    synthesis with Vivado, and deployment on a Nexys A7 FPGA board.
+                </p>
+            </div>
+
+
+
+        </div>
+
+        <!-- ================= SYSTEM ARCHITECTURE ================= -->
+
+        <h2 class="section-title">
+            System Architecture
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <p>
+                    The stopwatch was implemented as a hierarchical VHDL design centered around a top-level
+                    <strong>Chronometer</strong> entity integrating three main subsystems:
+                </p>
+
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Clock Generation Module (Clk_Div)</li>
+                    <li>Counter Module (Counter_dixieme_min_sec)</li>
+                    <li>Display Driver Module (Affichage)</li>
+                </ul>
+
+            </div>
+
+            <img src="images/Proj3/3-2architecture.png"
+                alt="Global Stopwatch Architecture"
+                class="project-image-half"
+                style="width:85%; max-width:1150px;">
+
+        </div>
+
+        <!-- ================= COUNTER ARCHITECTURE ================= -->
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <h3>Counter Block Architecture</h3>
+
+                <p>
+                    The timing engine consists of cascaded modular counters synchronized through
+                    terminal-count propagation.
+                </p>
+
+                <ul class="text-bullets">
+                    <li>Tenths-of-second counter (Mod-10)</li>
+                    <li>Seconds units counter (Mod-10)</li>
+                    <li>Seconds tens counter (Mod-6)</li>
+                    <li>Minutes units counter (Mod-10)</li>
+                    <li>Minutes tens counter (Mod-6)</li>
+                </ul>
+
+            </div>
+
+            <img src="images/Proj3/3-3counter_scheme.png"
+                alt="Counter Block Architecture"
+                class="project-image-half">
+
+        </div>
+
+        <h2 class="section-title">
+            Clock Generation & Control Logic
+        </h2>
+
+        <div class="projects-grid" style="margin-bottom:4rem;">
+
+            <div class="project-card">
+
+                <div class="project-content">
+
+                    <h3>Clock Generation</h3>
+
+                    <p>
+                        A dedicated clock divider was implemented to derive low-frequency timing signals
+                        from the FPGA 100 MHz oscillator.
+                    </p>
+
+                    <ul class="text-bullets">
+                        <li>Counting clock generation</li>
+                        <li>Display refresh clock generation</li>
+                        <li>Speed selection mode for accelerated testing</li>
+                        <li>Stable synchronous timing management</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div style="
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                    gap:2rem;
+                    width:100%;
+                ">
+
+                    <div class="project-content" style="flex:1;">
+
+                        <h3>Control Logic (FSM)</h3>
+
+                        <p>
+                            User interaction is handled through a Finite-State Machine controlling the stopwatch
+                            operating modes while ensuring deterministic behavior.
+                        </p>
+
+                        <ul class="text-bullets">
+                            <li>Start</li>
+                            <li>Pause / Resume</li>
+                            <li>Reset</li>
+                        </ul>
+
+                    </div>
+
+                    <img src="images/Proj3/3-5FSM.png"
+                        alt="Stopwatch FSM"
+                        style="
+                            width:180px;
+                            height:auto;
+                            border-radius:12px;
+                            flex-shrink:0;
+                        ">
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ================= DISPLAY DRIVER ================= -->
+
+        <h2 class="section-title">
+            Display Driver
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <p>
+                    A multiplexed display controller was developed to drive four common-anode
+                    seven-segment displays showing the stopwatch value in MM:SS format.
+                </p>
+
+                <ul class="text-bullets">
+                    <li>BCD-to-7-segment decoding</li>
+                    <li>Digit selection and multiplexing</li>
+                    <li>Refresh scheduling</li>
+                    <li>LED management for tenths-of-second visualization</li>
+                </ul>
+
+            </div>
+            <img src="images/Proj3/3-4display_scheme.png"
+                alt="Display Architecture"
+                class="project-image-half"
+                style="width:85%; max-width:1150px;">
+
+        </div>
+
+        <!-- ================= SIMULATION ================= -->
+
+        <h2 class="section-title">
+            Functional Simulation
+        </h2>
+
+        <div style="display:flex;
+            flex-direction:column;
+            gap:2rem;
+            margin-bottom:4rem;">
+
+            <div class="project-card">
+
+                <img src="images/Proj3/3-7chrono1.png"
+                    alt="Counter Tenths Timing Diagram"
+                    class="project-image-full">
+                
+                <div class="project-content">
+
+                    <h3>Tenths Counter Validation : Tenths counting block</h3>
+
+                    <p>
+                        Verification of increment behavior, reset conditions and
+                        terminal-count generation through the chronograph result of the Tenths Counter Test Bench : 
+                        The led_out[0:9] signal contols the Thenths indicator LED. The tc output signal is connected to clk signal of the unit counting block. 
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <img src="images/Proj3/3-8chrono2.png"
+                    alt="Counter Unit Timing Diagram"
+                    class="project-image-full">
+
+                <div class="project-content">
+
+                    <h3>Seconds Counter Validation : Unit counting block</h3>
+
+                    <p>
+                        Validation of synchronization and carry propagation between
+                        counter stages during simulation through the chronograph result of the Unit Counter Test Bench : 
+                        The output[3:0] signal gives the binary unit number from the tc signal of tenth funcionnal block.
+                        The same pattern repeats for the following counting blocks.  
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= FPGA VALIDATION ================= -->
+
+        <h2 class="section-title">
+            FPGA Hardware Validation
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <p>
+                    After synthesis and implementation in Vivado, the design was deployed
+                    on a Nexys A7 FPGA board and validated under real operating conditions.
+                </p>
+
+                <ul class="text-bullets">
+                    <li>Start / Stop operation</li>
+                    <li>Pause / Resume functionality</li>
+                    <li>System reset validation</li>
+                    <li>Display refresh verification</li>
+                    <li>Accelerated mode testing</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- ================= RESULTS ================= -->
+
+        <h2 class="section-title">
+            Results & Analysis
+        </h2>
+
+        <div class="skills-grid" style="margin-bottom: 4rem;">
+
+            <div class="skill-card">
+                <h3>Architecture</h3>
+
+                <p>
+                    Modular and scalable VHDL implementation following hierarchical
+                    FPGA design principles.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Performance</h3>
+
+                <p>
+                    Accurate time counting up to 59:59.9 with stable synchronous
+                    operation and reliable FSM-based control.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Validation</h3>
+
+                <p>
+                    Successful transition from simulation to hardware with
+                    flicker-free display multiplexing and deterministic behavior.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ================= CHALLENGES ================= -->
+
+        <h2 class="section-title">
+            Challenges & Engineering Decisions
+        </h2>
+
+        <div class="project-card" style="margin-bottom: 4rem;">
+
+            <div class="project-content">
+
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">Clock-domain management</strong><br>
+                        Separation of timing and display refresh frequencies while maintaining synchronization.
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">Counter synchronization</strong><br>
+                        Reliable carry propagation between cascaded BCD counters.
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <strong style="color: white;">Display multiplexing</strong><br>
+                        Achieving flicker-free operation while minimizing hardware resources.
+                    </li>
+
+                    <li>
+                        <strong style="color: white;">System verification</strong><br>
+                        Independent module validation before complete system integration.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- ================= SKILLS DEVELOPED ================= -->
+
+        <h2 class="section-title">
+            Skills Developed
+        </h2>
+
+        <div class="tech-list">
+
+            <div class="tech-item">VHDL Programming</div>
+            <div class="tech-item">FPGA Design</div>
+            <div class="tech-item">Xilinx Artix-7</div>
+            <div class="tech-item">Finite-State Machines</div>
+            <div class="tech-item">Digital Logic Design</div>
+            <div class="tech-item">Vivado Simulation</div>
+            <div class="tech-item">Testbench Development</div>
+            <div class="tech-item">GHDL + GTKWave simulation</div>
+
+
+        </div>
+
+    </div>
+</section>
+```
+
+
     <!-- ================= FOOTER ================= -->
 
     <footer>
         <div class="container">
             <p>
-                © 2026 Victor Gérentet — Electrical & Electronics Engineering Portfolio
+                © 2026 Gérentet Victor — Electrical & Electronics Engineering Portfolio
             </p>
         </div>
     </footer>
