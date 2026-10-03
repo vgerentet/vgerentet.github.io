@@ -261,13 +261,18 @@
         }
 
         .project-card-link {
-            display: block;
+            display: flex;
+            flex-direction: column;
             color: inherit;
             cursor: pointer;
+            height: 100%;
         }
 
         .project-content {
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-content h3 {
@@ -298,6 +303,7 @@
         .project-link {
             color: var(--primary);
             font-weight: 600;
+            margin-top: auto;
         }
 
         .project-link:hover {
@@ -314,6 +320,24 @@
             width: 100%;
             margin: 0;
             border-radius: 0;
+        }
+
+        .project-image-70 {
+            width: 70%;
+            margin: 1rem auto;
+            border-radius: 14px;
+        }
+
+        .studies-logo {
+            width: 50%;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 16px;
+        }
+
+        .project-content {
+            position: relative;
         }
 
         .text-bullets {
@@ -396,10 +420,11 @@
 
     <header>
         <div class="container navbar">
-            <div class="logo">Gérentet Victor - Portfolio</div>
+            <div class="logo">Victor Gérentet - Portfolio</div>
 
             <nav class="nav-links">
                 <a href="#home">Home</a>
+                <a href="#studies">Studies</a>
                 <a href="#skills">Skills</a>
                 <a href="#technologies">Technologies</a>
                 <a href="#projects">Projects</a>
@@ -419,12 +444,12 @@
                 </h1>
 
                 <p>
-                    Engineering student specialized in embedded systems, power electronics, analog electronics, RF systems, signal processing, FPGA programming, and embedded hardware. Experienced in sensor/actuator interfacing, Arduino development, and high-frequency electronic design. Interests in microcontroller programming and microchip engineering.
+                I am currently an engineering student at INSA Lyon University. I specialize in embedded hardware systems, analog electronics, RF systems and Integrated Circuit design. I am experienced in sensor/actuator interfacing, Arduino development, FPGA programming.
+
                 </p>
 
                 <p>
-                    This portfolio presents academic and personal engineering projects developed during my studies
-                    in electronics and electrical engineering, as well as the general content of my studies.
+                    This portfolio presents some of my academic and personal engineering projects developed during my studies in electronics and electrical engineering, as well as the general content of my studies.
                 </p>
 
                 <div class="hero-buttons">
@@ -441,11 +466,98 @@
             <div class="profile-card">
                 
 
-                <h3>Victor Gérentet</h3>
+                <h3> Victor Gérentet</h3>
+
+                <img src="images/PP.png" alt="Profile" style="width: 90%; margin: 0 auto 1rem auto;">
 
                 <p>
-                    INSA Lyon University • Electrical Engineering Faculty • specialized in embedded electronics
+                    Master's student at INSA Lyon University.
                 </p>
+                <p>
+                    Eager to take on the future challenges of the embedded electronics industry.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= STUDIES ================= -->
+
+    <section id="studies">
+        <div class="container">
+
+            <h2 class="section-title">Studies</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <img src="images/Studies/logo_insa.png" alt="INSA Logo" class="studies-logo">
+                        <h3><a href="https://www.insa-lyon.fr/en/" target="_blank">INSA Lyon</a></h3>
+                        <p>
+                            2022-2027
+                        </p>
+                        <p>
+                            General Engineering French University (Grande École) ranked <a href="https://etudiant.lefigaro.fr/etudes/ecoles-ingenieurs/classement-post-bac/" target="_blank" style="color: var(--primary); text-decoration: underline;">n°1</a> post-high school Engineering University in France.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Bachelor equivalence (2022-2024) : </strong></p>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Course content :</strong></p>
+                        <ul class="text-bullets" style="margin-top: 0.3rem;">
+                            <li style="margin-bottom: 0;">Mathematics</li>
+                            <li style="margin-bottom: 0;">Fundamental physics</li>
+                            <li style="margin-bottom: 0;">Mechanics</li>
+                            <li style="margin-bottom: 0;">Python & C++ programming</li>
+                            <li style="margin-bottom: 0;">Signal processing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                    
+                        <h3><a href="https://www.insa-lyon.fr/en/node/1048" target="_blank">Electrical Engineering Department</a></h3>
+                        <p>
+                            2024-2027
+                        </p>
+                        <p>
+                            Master's Degree in Electrical Engineering 
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Course content :</strong></p>
+                        <ul class="text-bullets" style="margin-top: 0.3rem;">
+                            <li style="margin-bottom: 0;">Advanced automation & control system</li>
+                            <li style="margin-bottom: 0;">Telecommunication & RF transmission lines</li>
+                            <li style="margin-bottom: 0;">Analog electronics & sensors</li>
+                            <li style="margin-bottom: 0;">Real time operating systems</li>
+                            <li style="margin-bottom: 0;">Analog electronics & sensors</li>
+                            <li style="margin-bottom: 0;">Integrated circuits & sensors</li>
+                            <li style="margin-bottom: 0;">Semiconductors and Device Physics</li>
+                            <li style="margin-bottom: 0;">On-chip heat transfer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <img src="images/Studies/logo_rwth.png" alt="INSA Logo" class="studies-logo">
+                        <h3><a href="" target="_blank">RWTH Aachen</a></h3>
+                        <p>
+                            2025-2026
+                        </p>
+                        <p>
+                            University of RWTH Aachen (Germany)
+                            Faculty of Electrical Engineering & Information Technology.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Course content :</strong></p>
+                        <ul class="text-bullets" style="margin-top: 0.3rem;">
+                            <li style="margin-bottom: 0;">High frequency electronics / RF systems</li>
+                            <li style="margin-bottom: 0;">RADAR systems & RADAR signal processing</li>
+                            <li style="margin-bottom: 0;">Digital hardware & Microprocessor architecture</li>
+                            <li style="margin-bottom: 0;">Machine learning</li>
+                            <li style="margin-bottom: 0;">Power electronics</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -463,7 +575,7 @@
                 <div class="skill-card">
                     <h3>Embedded Systems</h3>
                     <p>
-                        Embedded software development on microcontrollers and FPGA, real-time sensor acquisition, hardware integration, communication protocols (Ethernet, CAN).
+                        Embedded software development on microcontrollers and FPGA, real-time sensor acquisition, real time operating systems (RTOS), hardware integration, communication protocols (Ethernet, CAN).
                     </p>
                 </div>
 
@@ -477,14 +589,14 @@
                 <div class="skill-card">
                     <h3>Power Electronics</h3>
                     <p>
-                        power conversion systems: buck converters, half/full-bridge inverters and resonant topologies.
+                        power conversion systems: buck boost converters, half/full-bridge inverters and resonant topologies.
                     </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Electronics</h3>
                     <p>
-                        Analog and digital electronics design, PCB development, signal conditioning and RF electronics
+                        Analog and digital electronics design, PCB development, Integrated circuit design, signal conditioning and RF electronics
                     </p>
                 </div>
 
@@ -555,10 +667,14 @@
                         </p>
 
                         <div class="project-tags">
-                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">Embedded</span>
                             <span class="tag">Analog Electronics</span>
                             <span class="tag">LTSpice</span>
                         </div>
+
+                        <img src="images/1-5pcb.png"
+                            alt="Analog Sound Level Meter PCB"
+                            class="project-image-70">
 
                         <span class="project-link">
                             View Project →
@@ -586,6 +702,10 @@
                             <span class="tag">MATLAB</span>
                         </div>
 
+                        <img src="images/photo1.png"
+                            alt="Ultrasonic Rotating Scanner"
+                            class="project-image-70">
+
                         <span class="project-link">
                             View Project →
                         </span>
@@ -611,8 +731,39 @@
                             <span class="tag">VHDL</span>
                         </div>
 
+                        <img src="images/Proj3/NexysA7.jpg"
+                            alt="Digital stopwatch on FPGA"
+                            class="project-image-70">
+
                         <span class="project-link">
                             View Project →
+                        </span>
+
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+
+                <a href="https://github.com/vgerentet/OBS-Live-Media-Controller" target="_blank" class="project-card project-card-link interactive-hover">
+
+                    <div class="project-content">
+
+                        <h3>Python–OBS Live Media Controller</h3>
+
+                        <p>
+                            Designed and developed a configurable Python-based live media control system integrating OBS Studio to trigger images and videos directly from keyboard inputs. The project focused on real-time control, user configurability, and reliable communication with OBS.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OBS Studio & OBS WebSocket</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Keyboard event handling</span>
+                            <span class="tag">User configuration</span>
+                        </div>
+
+                        <span class="project-link">
+                            View repository →
                         </span>
 
                     </div>
@@ -1871,7 +2022,7 @@
     <footer>
         <div class="container">
             <p>
-                © 2026 Gérentet Victor — Electrical & Electronics Engineering Portfolio
+                © 2026 Victor Gérentet  — Electrical & Electronics Engineering Portfolio
             </p>
         </div>
     </footer>
